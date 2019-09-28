@@ -1,6 +1,7 @@
 // from data.js
 var tableData = data;
 
+// Variables
 var button = d3.select("#filter-btn");
 var inputField1 = d3.select("#datetime");
 var inputField2 = d3.select("#city");
@@ -50,10 +51,10 @@ button.on("click", () => {
     else {
       tbody.append("tr").append("td").text("No results found!"); 
     }
-})
+});
 
 resetbtn.on("click", () => {
   tbody.html("");
   populate(data)
   console.log("Table reset")
-})
+});
